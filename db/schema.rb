@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_24_193225) do
+ActiveRecord::Schema.define(version: 2020_07_22_160521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_04_24_193225) do
     t.string "zip_code"
     t.string "phone"
     t.string "email"
+    t.jsonb "city_state_blob", default: "{}", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
